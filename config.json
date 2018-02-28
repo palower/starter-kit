@@ -1,0 +1,33 @@
+{
+    "src": {
+        "sass": "src/scss/",        
+        "images": "src/img/",
+        "fonts": "src/fonts/",        
+        "scripts": "src/js/",
+        "pug": "src/views/pse/"        
+    },
+    "dest": {
+        "css": "Content/pse/css/",
+        "js": "Content/pse/js/",
+        "fonts": "Content/pse/fonts/",
+        "images": "Content/pse/img/",
+        "HTML": "Content/pse/html/"
+    },
+    "vendor": {
+        "src": [
+            "src/js/vendor/jquery-1.10.2.min.js",
+            "src/js/vendor/bootstrap.min.js"            
+        ],
+        "dest": "js"
+    },
+    "component": {
+        "src": [
+            "src/js/components/payment-arrangement.js",
+            "src/js/components/mega-menu.js",
+            "src/js/components/externallink-popup.js",
+            "src/js/components/secondary-navigation.js",
+            "src/js/components/footer.js"
+        ],
+        "dest": "js"
+    }
+}
