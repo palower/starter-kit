@@ -31,7 +31,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('vendor', function() {   
-    return gulp.src(['app/js/vendor/jquery-3.3.1.min.js', 'app/js/vendor/bootstrap.min.js'])
+    return gulp.src(['app/js/vendor/jquery-3.3.1.min.js', 'app/js/vendor/bootstrap.min.js', 'app/js/vendor/slick.min.js'])
         .pipe(plumber())
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('app/js'))
@@ -65,6 +65,7 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/js/**/*.js', ['scripts']);
     gulp.watch('app/*.html').on('change', browserSync.reload);
     // gulp.watch('app/views/');
     gulp.watch("app/views/**/*.pug", ['pug']);
