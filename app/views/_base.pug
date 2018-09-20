@@ -13,12 +13,12 @@ html(lang='en')
     body
         header
             #header.container
-                include views/components/header.pug
-        #main.container
+                include ../views/components/header.pug
+        main
             block content
         footer
             #footer.container
-                include views/components/footer.pug
+                include ../views/components/footer.pug
         block scripts
             script(src='js/vendor.min.js')
             script(src='js/scripts.min.js')

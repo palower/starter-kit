@@ -60,7 +60,7 @@ gulp.task('serve', ['sass'], function() {
         server: {
             baseDir: './app',
             proxy: 'localhost',
-            index: 'html/views/home.html'            
+            index: 'html/views/pages/home.html'            
         }
     });
 
