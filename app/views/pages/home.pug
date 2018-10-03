@@ -1,15 +1,18 @@
-extends ../page layouts/_standard      
+extends ../page layouts/_standard
+block page_title 
+  | Homepage
 block toprow  
-  p toprow of content
+  include ../components/hero-banner.pug 
+  include ../components/featured-item.pug
 
 block 2col-cell1
-  p row 2 cell 1 
+  include ../components/promo-box.pug 
 block 2col-cell2
-  p row 2 cell 2 
+  include ../components/promo-box.pug 
 
 block 3col-cell1
-  p row 3 cell 1 
+  include ../components/call-to-action.pug 
 block 3col-cell2
-  p row 3 cell 2 
+  include ../components/call-to-action.pug 
 block 3col-cell3
-  p row 3 cell 3 
+  include ../components/call-to-action.pug 

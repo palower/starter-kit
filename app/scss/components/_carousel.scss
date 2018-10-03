@@ -1,0 +1,54 @@
+.carousel {
+    &.component{
+        margin:0 -15px 50px -15px;
+    }
+    .carousel-slider {
+        .slide {
+            height:255px;
+            position: relative;
+            .slide-img {
+            }
+            .slide-copy {
+                color:#fff;
+                position: absolute;
+                padding:25px;
+                width:80%;
+                margin:auto;
+                left:0;
+                right:0;
+                z-index:1;
+                background-color: rgba($color: #000000, $alpha: 0.65);    
+                &.align-right {
+                    bottom:25px;
+                }
+                &.align-left {
+                    bottom:25px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .carousel {
+        .carousel-slider {
+            .slide {
+                height:100%;
+                .slide-copy {
+                    width:80%;
+                    margin:0;
+                    &.align-right {
+                        bottom:25px;
+                        right:25px;    
+                    }
+                    &.align-left {
+                        bottom:25px;
+                        left:25px;    
+                    }
+                    }
+            }
+        }
+    
+    }
+}

@@ -68,6 +68,7 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch('app/*.html').on('change', browserSync.reload);
     // gulp.watch('app/views/');
     gulp.watch("app/views/**/*.pug", ['pug']);
+    gulp.watch("app/js/scripts/*.js", ['scripts']);
 });
 
 gulp.task('default', ['serve', 'scripts', 'vendor', 'pug']);

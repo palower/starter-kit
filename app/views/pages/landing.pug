@@ -1,0 +1,17 @@
+extends ../page layouts/_full-width-banner
+block page_title 
+  | Landing Page
+block page_styles
+  link(rel="stylesheet" href="/css/vendor/slick.css")
+  link(rel="stylesheet" href="/css/vendor/slick-theme.css")
+
+block toprow  
+  include ../components/carousel.pug 
+
+block 2col-cell1
+  include ../components/promo-box.pug 
+block 2col-cell2
+  include ../components/promo-box.pug 
+
+block page_scripts
+  script(src='/js/vendor/slick.min.js')

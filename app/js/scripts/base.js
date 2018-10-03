@@ -1,6 +1,14 @@
 (function($) {
-    console.log('logs immediately');
     $(document).ready(function(){
-      console.log('logs after ready');
+      
+      $(".footer-col h4").click(function(){
+        $(this).next("ul").toggle();
+      });
+
+      $(".carousel-slider").slick({
+        dots: true
+
+      });
     });
   })(jQuery);
+
