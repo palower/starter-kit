@@ -17,6 +17,15 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('kitchen-sass', function() {
+    return gulp.src('app/scss/kitchen-sink.scss')
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(rename({suffix: '.min'}))
+		.pipe(clean())
+        .pipe(gulp.dest('app/css'))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('scripts', function() {   
     return gulp.src('app/js/scripts/*.js')
         .pipe(plumber())
@@ -29,6 +38,19 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.stream());
 });
+
+gulp.task('kitchen-scripts', function() {   
+    return gulp.src('app/js/kithcen-sink.js')
+        .pipe(plumber())
+        .pipe(gulp.dest('app/js'))
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('app/js'))
+        .pipe(browserSync.stream());
+});
+
 
 gulp.task('vendor', function() {   
     return gulp.src(['app/js/vendor/jquery-3.3.1.min.js', 'app/js/vendor/bootstrap.min.js'])
@@ -60,17 +82,18 @@ gulp.task('serve', ['sass'], function() {
         server: {
             baseDir: './app',
             proxy: 'localhost',
-            index: 'html/views/pages/home.html'            
+            index: 'html/views/pages/kitchen-sink.html'            
         }
     });
 
-    gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('app/scss/**/*.scss', ['sass', 'kitchen-sass']);
     gulp.watch('app/*.html').on('change', browserSync.reload);
     // gulp.watch('app/views/');
     gulp.watch("app/views/**/*.pug", ['pug']);
     gulp.watch("app/js/scripts/*.js", ['scripts']);
+    gulp.watch("app/js/kitchen-scripts.js", ['kitchen-scripts']);
 });
 
-gulp.task('default', ['serve', 'scripts', 'vendor', 'pug']);
+gulp.task('default', ['serve', 'scripts', 'kitchen-scripts', 'vendor', 'pug']);
 
 //gulp.task('default', ['clean', 'icons', 'serve','vendor','componentscript','kitchensink','pug']);

@@ -1,0 +1,16 @@
+//- kitchen sink page layout with full bleed background top row
+//- used specifically for the kitchen sink page
+//- mixture of columns
+
+extends ../_base      
+block page_title
+
+block content  
+    .container-fluid
+        .row
+            .col-xs-12.col-sm-9
+                block toprow
+            .hidden-xs.col-sm-3
+                block rightrail
+    a.back-to-top Back to Top 
+        i.fas.fa-arrow-circle-up

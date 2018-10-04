@@ -1,0 +1,88 @@
+extends ../page layouts/_kitchen-sink
+block page_title 
+  | Landing Page
+block page_styles
+  link(rel="stylesheet" href="/css/vendor/slick.css")
+  link(rel="stylesheet" href="/css/vendor/slick-theme.css")
+  link(rel="stylesheet" href="/css/kitchen-sink.min.css")
+
+block toprow
+  //- component block - anchor + include + code snippet
+  a.anchor(name="banner-lg")   
+  include ../components/hero-banner.pug
+  .code-snippet-btn Code 
+    i.fas.fa-chevron-down 
+  .code-snippet
+    h2 Hero Banner  
+    xmp 
+      include ../../html/views/components/hero-banner.html 
+
+  a.anchor(name="banner-sm")   
+  include ../components/small-banner.pug
+  .code-snippet-btn Code 
+    i.fas.fa-chevron-down 
+  .code-snippet
+    h2 Small Banner  
+    xmp 
+      include ../../html/views/components/small-banner.html 
+
+  //- component block - anchor + include + code snippet
+  a.anchor(name="call-to-action")   
+  include ../components/call-to-action.pug
+  .code-snippet-btn Code 
+    i.fas.fa-chevron-down 
+  .code-snippet
+    h2 Call to Action  
+    xmp 
+      include ../../html/views/components/call-to-action.html 
+
+  //- component block - anchor + include + code snippet
+  a.anchor(name="carousel")   
+  include ../components/carousel.pug
+  .code-snippet-btn Code 
+    i.fas.fa-chevron-down 
+  .code-snippet
+    h2 Carousel  
+    xmp 
+      include ../../html/views/components/carousel.html 
+
+  //- component block - anchor + include + code snippet
+  a.anchor(name="featured-item")   
+  include ../components/featured-item.pug
+  .code-snippet-btn Code 
+    i.fas.fa-chevron-down 
+  .code-snippet
+    h2 Featured Item  
+    xmp 
+      include ../../html/views/components/featured-item.html 
+
+  //- component block - anchor + include + code snippet
+  a.anchor(name="promo-box")   
+  include ../components/promo-box.pug
+  .code-snippet-btn Code 
+    i.fas.fa-chevron-down 
+  .code-snippet
+    h2 Promo Box  
+    xmp 
+      include ../../html/views/components/promo-box.html 
+
+block rightrail
+  .component-list
+    h3 Components
+    ul
+      li  
+        .component-anchor(data-name="banner-lg") Banner (hero)
+      li
+        .component-anchor(data-name="banner-sm") Banner (small) 
+      li
+        .component-anchor(data-name="call-to-action") Call to Action
+      li
+        .component-anchor(data-name="carousel") Carousel
+      li
+        .component-anchor(data-name="featured-item") Featured Item
+      li
+        .component-anchor(data-name="promo-box") Promo Box
+
+block page_scripts
+  script(src='/js/kitchen-scripts.js')
+  script(src='/js/vendor/slick.min.js')
