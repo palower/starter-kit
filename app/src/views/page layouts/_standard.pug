@@ -1,0 +1,27 @@
+//- standard page layout
+//- 1 col + 2 col + 3 col layout
+//- max width bootstrap container
+
+extends ../_base
+block page_title
+          
+block content  
+    .container
+        .row
+            .col-xs-12
+                block page_heading
+        .row
+            .col-xs-12
+                block toprow
+        .row
+            .col-xs-12.col-sm-6
+                block 2col-cell1
+            .col-xs-12.col-sm-6
+                block 2col-cell2
+        .row    
+            .col-xs-12.col-sm-4
+                block 3col-cell1
+            .col-xs-12.col-sm-4
+                block 3col-cell2
+            .col-xs-12.col-sm-4
+                block 3col-cell3
