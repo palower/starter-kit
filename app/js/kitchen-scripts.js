@@ -2,7 +2,7 @@
     $(document).ready(function(){
       
       $(".code-snippet-btn").click(function(){
-        $(this).next(".code-snippet").toggle();
+        $(this).parent().next(".code-snippet").toggle();
         $(this).find("i").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up");
       });
 

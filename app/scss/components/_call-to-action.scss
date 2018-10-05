@@ -3,6 +3,7 @@
         color:#333;
         text-decoration: none;
         display: inline-block;
+        width:100%;
         &:hover, &:active, &:visited, &:focus,  &:active:hover {
             text-decoration: none;
             color:#333;
@@ -13,7 +14,7 @@
         .cta-image {
             width:30%;
             float:left;
-            padding:15px 0;
+            padding:15px 0 15px 15px;
             img {
                 max-width: 100%;
                 width:100%;

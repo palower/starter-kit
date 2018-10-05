@@ -1,11 +1,25 @@
-.code-snippet-btn {
-    cursor: pointer;
-    padding:10px 10px 10px 0;
-    margin-top:-35px;
+.kitchen-btns{
+    margin-top:-15px;
     margin-bottom:25px;
-    font-size:1.2em;
-    i {
-        transition: ease; 
+    .code-snippet-btn, .see-on-page {
+        cursor: pointer;
+        padding:10px 10px 10px 0;
+        font-size:1.2em;
+        i {
+            transition: ease; 
+        }
+    }    
+    .see-on-page {
+        padding:10px;
+    }
+    .component-dependencies {
+        float:right;
+        text-align: right;
+        padding-top:2px;
+        .dependency {
+            font-weight: bold;
+            font-size: 1em;
+        }
     }
 }
 .code-snippet {

@@ -1,6 +1,6 @@
 extends ../page layouts/_kitchen-sink
 block page_title 
-  | Landing Page
+  | Kitchen Sink
 block page_styles
   link(rel="stylesheet" href="/css/vendor/slick.css")
   link(rel="stylesheet" href="/css/vendor/slick-theme.css")
@@ -10,8 +10,17 @@ block toprow
   //- component block - anchor + include + code snippet
   a.anchor(name="banner-lg")   
   include ../components/hero-banner.pug
-  .code-snippet-btn Code 
-    i.fas.fa-chevron-down 
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    | |
+    a.see-on-page(href="/html/views/pages/home.html" target="_blank") See on page 
+      i.fas.fa-chevron-right 
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS
+
   .code-snippet
     h2 Hero Banner  
     xmp 
@@ -19,8 +28,15 @@ block toprow
 
   a.anchor(name="banner-sm")   
   include ../components/small-banner.pug
-  .code-snippet-btn Code 
-    i.fas.fa-chevron-down 
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    a.see-on-page(href="/html/views/pages/article.html" target="_blank") See on page 
+      i.fas.fa-chevron-right 
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS
   .code-snippet
     h2 Small Banner  
     xmp 
@@ -29,8 +45,16 @@ block toprow
   //- component block - anchor + include + code snippet
   a.anchor(name="call-to-action")   
   include ../components/call-to-action.pug
-  .code-snippet-btn Code 
-    i.fas.fa-chevron-down 
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    | |
+    a.see-on-page(href="/html/views/pages/article.html" target="_blank") See on page 
+      i.fas.fa-chevron-right 
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS
   .code-snippet
     h2 Call to Action  
     xmp 
@@ -39,8 +63,16 @@ block toprow
   //- component block - anchor + include + code snippet
   a.anchor(name="carousel")   
   include ../components/carousel.pug
-  .code-snippet-btn Code 
-    i.fas.fa-chevron-down 
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    | |
+    a.see-on-page(href="/html/views/pages/landing.html" target="_blank") See on page 
+      i.fas.fa-chevron-right 
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS, JS, Slick CSS(2) &amp; JS
   .code-snippet
     h2 Carousel  
     xmp 
@@ -49,8 +81,16 @@ block toprow
   //- component block - anchor + include + code snippet
   a.anchor(name="featured-item")   
   include ../components/featured-item.pug
-  .code-snippet-btn Code 
-    i.fas.fa-chevron-down 
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    | |
+    a.see-on-page(href="/html/views/pages/home.html" target="_blank") See on page 
+      i.fas.fa-chevron-right 
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS
   .code-snippet
     h2 Featured Item  
     xmp 
@@ -59,8 +99,16 @@ block toprow
   //- component block - anchor + include + code snippet
   a.anchor(name="promo-box")   
   include ../components/promo-box.pug
-  .code-snippet-btn Code 
-    i.fas.fa-chevron-down 
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    | |
+    a.see-on-page(href="/html/views/pages/home.html" target="_blank") See on page 
+      i.fas.fa-chevron-right
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS
   .code-snippet
     h2 Promo Box  
     xmp 
