@@ -10,3 +10,10 @@ var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.
     });
   })(jQuery);
 
+
+//- get query string val
+  function getQueryVal(query){
+  var url = new URLSearchParams(window.location.search);
+  var param = url.get(query);
+  return param;
+}

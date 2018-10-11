@@ -8,6 +8,25 @@ block page_styles
 
 block toprow
   //- component block - anchor + include + code snippet
+  a.anchor(name="accordion")   
+  include ../components/accordion.pug
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    | |
+    a.see-on-page(href="/content/html/views/pages/about.html" target="_blank") See on page 
+      i.fas.fa-chevron-right 
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS, JS, BOOTSTRAP CSS &amp; JS
+
+  .code-snippet
+    h2 Accordion  
+    xmp 
+      include ../../../content/html/views/components/accordion.html 
+
+  //- component block - anchor + include + code snippet
   a.anchor(name="banner-lg")   
   include ../components/hero-banner.pug
   .kitchen-btns
@@ -25,6 +44,7 @@ block toprow
     h2 Hero Banner  
     xmp 
       include ../../../content/html/views/components/hero-banner.html 
+
 
   a.anchor(name="banner-sm")   
   include ../components/small-banner.pug
@@ -156,6 +176,8 @@ block rightrail
   .component-list
     h3 Components
     ul
+      li  
+        .component-anchor(data-name="accordion") Accordion
       li  
         .component-anchor(data-name="banner-lg") Banner (hero)
       li

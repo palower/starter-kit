@@ -3,6 +3,9 @@
         if(!isMobile && $(".tabs-stacked")){
             setTabContentHeight($("#a"));
         }
+        else{
+            setTabContentHeight($(".tabs-stacked"), $("ul.nav-stacked").children().length);
+        }
         $("ul.nav.nav-pills.nav-stacked li a").on("click touch", function(){
             event.preventDefault();
             $("ul.nav.nav-pills.nav-stacked li").removeClass("active");
@@ -18,6 +21,12 @@
     });
 })(jQuery);
 
-function setTabContentHeight(obj){
-    $("ul.nav.nav-pills.nav-stacked").height(obj.height());
+function setTabContentHeight(obj, numVal){
+    if(numVal){
+        var xHeight = $(".tabs-stacked ul.nav-stacked") + (numVal * $("ul.nav-stacked li").length - 1);
+        $("ul.nav.nav-pills.nav-stacked").height(obj.height() + xHeight);
+    }
+    else{
+        $("ul.nav.nav-pills.nav-stacked").height(obj.height());
+    }
 }

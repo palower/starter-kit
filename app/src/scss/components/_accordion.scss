@@ -1,0 +1,32 @@
+.accordion.component {
+    .accordion-item {
+        clear: both;
+        padding:0 0 15px 0;
+        .accordion-heading {
+            width:100%;
+            font-size: 1.5em;
+            border:1px solid #333; 
+            &:hover {
+                background-color:#eee;
+            }
+            a {
+                width:100%;
+                padding:10px 15px 10px 15px;
+                display:block;
+                color:#333;
+                &:active, &:hover, &:visited, &:focus{
+                    color:#333;
+                }
+                i {
+                    float:right;
+                    margin-top:5px;
+                }
+            }
+        }
+        .accordion-content{
+            p {
+                padding:10px 0;
+            }
+        }
+    }
+}
