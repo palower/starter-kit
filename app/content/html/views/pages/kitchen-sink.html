@@ -21,18 +21,18 @@
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#"> <img src="/content/images/logo.png"></a>
+              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#" title="Site Logo"> <img src="/content/images/logo.png"></a>
             </div>
             <div class="navbar-collapse collapse" id="navbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="/content/html/views/pages/kitchen-sink.html">Kitchen Sink</a></li>
-                <li><a href="/content/html/views/pages/home.html">Home</a></li>
-                <li><a href="/content/html/views/pages/article.html">Article</a></li>
-                <li><a href="/content/html/views/pages/landing.html">Landing</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <li class="active"><a href="/content/html/views/pages/kitchen-sink.html" title="Kitchen Sink">Kitchen Sink</a></li>
+                <li><a href="/content/html/views/pages/home.html" title="Home">Home</a></li>
+                <li><a href="/content/html/views/pages/article.html" title="Article">Article</a></li>
+                <li><a href="/content/html/views/pages/landing.html" title="Landing">Landing</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" title="Dropdown">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="/content/html/views/pages/about.html">About </a></li>
-                    <li><a href="#">Another action</a></li>
+                    <li><a href="/content/html/views/pages/about.html" title="About">About </a></li>
+                    <li><a href="/content/html/views/pages/detail.html" title="Detail">Detail </a></li>
                     <li><a href="#">Something else here</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Nav header</li>
@@ -60,6 +60,14 @@
                 <div class="collapse accordion-content in" id="a-accordion">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p>
                   <p>Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>
+                  <ul>
+                    <li>Mauris sed mi dolor. </li>
+                    <li>Crast aliquam lectus id leo finibus commodo </li>
+                  </ul>
+                  <ol>
+                    <li>Mauris sed mi dolor. </li>
+                    <li>Crast aliquam lectus id leo finibus commodo </li>
+                  </ol>
                 </div>
               </div>
               <div class="accordion-item">
@@ -90,6 +98,14 @@
     <div class="collapse accordion-content in" id="a-accordion">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p>
       <p>Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>
+      <ul>
+        <li>Mauris sed mi dolor. </li>
+        <li>Crast aliquam lectus id leo finibus commodo </li>
+      </ul>
+      <ol>
+        <li>Mauris sed mi dolor. </li>
+        <li>Crast aliquam lectus id leo finibus commodo </li>
+      </ol>
     </div>
   </div>
   <div class="accordion-item">
@@ -334,6 +350,91 @@
   </div>
 </div>
               </xmp>
+            </div><a class="anchor" name="video-player">  </a>
+            <div class="video-player component">
+              <figure id="videoContainer" data-fullscreen="false">
+                <video id="video" controls preload="metadata" poster="/content/images/poster.jpg">
+                  <source src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
+                  <source src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
+                  <source src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
+                </video>
+                <div id="videoPlayButton"><i class="fas fa-play"></i></div>
+                <ul class="controls" id="video-controls">
+                  <li>
+                    <button id="playpause" type="button"> <i class="fas fa-play"></i></button>
+                  </li>
+                  <li>
+                    <button id="stop" type="button" disabled><i class="fas fa-stop"></i></button>
+                  </li>
+                  <li class="progress">
+                    <progress id="progress" value="0" min="0"><span id="progress-bar"></span></progress>
+                  </li>
+                  <li>
+                    <button id="mute" type="button"><i class="fas fa-volume-mute"></i></button>
+                  </li>
+                  <li>
+                    <button id="fs" type="button"><i class="fas fa-arrows-alt"></i></button>
+                  </li>
+                </ul>
+                <figcaption>&copy; Lorem ipsum | <a href="http://mango.blender.org" title="Copyright link">copyrightlink.com</a></figcaption>
+                <div class="video-transcript"><a class="transcript-button" href="#transcriptCopy" data-toggle="collapse">Transcript  <i class="fas fa-plus"> </i></a>
+                  <div class="collapse accordion-content" id="transcriptCopy">
+                    <p>Fusce euismod mi at risus tincidunt malesuada. Donec pulvinar mauris sit amet orci tincidunt, luctus consectetur mi convallis. Integer fermentum semper rutrum. Nam placerat lacinia felis nec varius. Nunc metus nibh, malesuada posuere tortor eu, tincidunt aliquet metus. Nunc quis arcu a magna sodales malesuada sit amet non sapien. Maecenas vestibulum pretium ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet molestie ligula, nec molestie lectus.</p>
+                    <p>Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p>
+                    <p>Fusce euismod mi at risus tincidunt malesuada. Donec pulvinar mauris sit amet orci tincidunt, luctus consectetur mi convallis. Integer fermentum semper rutrum. Nam placerat lacinia felis nec varius. Nunc metus nibh, malesuada posuere tortor eu, tincidunt aliquet metus. Nunc quis arcu a magna sodales malesuada sit amet non sapien. Maecenas vestibulum pretium ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet molestie ligula, nec molestie lectus.</p>
+                    <p>Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <div class="kitchen-btns"><span class="code-snippet-btn">Code <i class="fas fa-chevron-down"> </i></span>|<a class="see-on-page" href="/content/html/views/pages/detail.html" target="_blank">See on page <i class="fas fa-chevron-right"></i></a>
+              <div class="component-dependencies"> <span class="dependency">DEPENDENCIES: </span>CSS, JS</div>
+            </div>
+            <div class="code-snippet">
+              <h2>Video Player  </h2>
+              <xmp>
+                 
+<div class="video-player component">
+  <figure id="videoContainer" data-fullscreen="false">
+    <video id="video" controls="controls" preload="metadata" poster="/content/images/poster.jpg">
+      <source src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4"/>
+      <source src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.webm" type="video/webm"/>
+      <source src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg"/>
+    </video>
+    <div id="videoPlayButton"><i class="fas fa-play"></i></div>
+    <ul class="controls" id="video-controls">
+      <li>
+        <button id="playpause" type="button"> <i class="fas fa-play"></i></button>
+      </li>
+      <li>
+        <button id="stop" type="button" disabled="disabled"><i class="fas fa-stop"></i></button>
+      </li>
+      <li class="progress">
+        <progress id="progress" value="0" min="0"><span id="progress-bar"></span></progress>
+      </li>
+      <li>
+        <button id="mute" type="button"><i class="fas fa-volume-mute"></i></button>
+      </li>
+      <li>
+        <button id="fs" type="button"><i class="fas fa-arrows-alt"></i></button>
+      </li>
+    </ul>
+    <figcaption>&copy; Lorem ipsum | <a href="http://mango.blender.org" title="Copyright link">copyrightlink.com</a></figcaption>
+    <div class="video-transcript"><a class="transcript-button" href="#transcriptCopy" data-toggle="collapse">Transcript  <i class="fas fa-plus"> </i></a>
+      <div class="collapse accordion-content" id="transcriptCopy">
+        <p>Fusce euismod mi at risus tincidunt malesuada. Donec pulvinar mauris sit amet orci tincidunt, luctus consectetur mi convallis. Integer fermentum semper rutrum. Nam placerat lacinia felis nec varius. Nunc metus nibh, malesuada posuere tortor eu, tincidunt aliquet metus. Nunc quis arcu a magna sodales malesuada sit amet non sapien. Maecenas vestibulum pretium ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet molestie ligula, nec molestie lectus.</p>
+        <p>Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p>
+        <p>Fusce euismod mi at risus tincidunt malesuada. Donec pulvinar mauris sit amet orci tincidunt, luctus consectetur mi convallis. Integer fermentum semper rutrum. Nam placerat lacinia felis nec varius. Nunc metus nibh, malesuada posuere tortor eu, tincidunt aliquet metus. Nunc quis arcu a magna sodales malesuada sit amet non sapien. Maecenas vestibulum pretium ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet molestie ligula, nec molestie lectus.</p>
+        <p>Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p>
+      </div>
+    </div>
+  </figure>
+</div>
+              </xmp>
             </div>
           </div>
           <div class="hidden-xs col-sm-3">
@@ -366,6 +467,9 @@
                 </li>
                 <li>
                   <div class="component-anchor" data-name="tabs-left">Tabs (left nav)</div>
+                </li>
+                <li>
+                  <div class="component-anchor" data-name="video-player">Video Player</div>
                 </li>
               </ul>
             </div>

@@ -12,8 +12,13 @@ var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.
 
 
 //- get query string val
-  function getQueryVal(query){
+function getQueryVal(query){
   var url = new URLSearchParams(window.location.search);
   var param = url.get(query);
   return param;
+}
+
+//toggle plus-minus
+function togglePlusMinus(obj){
+  obj.find("i").toggleClass("fa-plus").toggleClass("fa-minus");
 }

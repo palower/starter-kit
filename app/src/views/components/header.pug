@@ -6,7 +6,7 @@ nav.navbar.navbar-default.navbar-fixed-top
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-            a.navbar-brand(href='#') 
+            a.navbar-brand(href='#' title="Site Logo") 
                 img(src='/content/images/logo.png')
             //- .search-btn-mobile.visible-xs-inline-block.visible-sm-inline-block
             //-     button.btn.btn-default(type="button")
@@ -14,22 +14,22 @@ nav.navbar.navbar-default.navbar-fixed-top
         #navbar.navbar-collapse.collapse
             ul.nav.navbar-nav
                 li.active
-                    a(href='/content/html/views/pages/kitchen-sink.html') Kitchen Sink
+                    a(href='/content/html/views/pages/kitchen-sink.html' title="Kitchen Sink") Kitchen Sink
                 li
-                    a(href='/content/html/views/pages/home.html') Home
+                    a(href='/content/html/views/pages/home.html' title="Home") Home
                 li
-                    a(href='/content/html/views/pages/article.html') Article
+                    a(href='/content/html/views/pages/article.html' title="Article") Article
                 li
-                    a(href='/content/html/views/pages/landing.html') Landing
+                    a(href='/content/html/views/pages/landing.html' title="Landing") Landing
                 li.dropdown
-                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false' title="Dropdown")
                         | Dropdown 
                         span.caret
                     ul.dropdown-menu(role='menu')
                         li
-                            a(href='/content/html/views/pages/about.html') About 
+                            a(href='/content/html/views/pages/about.html' title="About") About 
                         li
-                            a(href='#') Another action
+                            a(href='/content/html/views/pages/detail.html' title="Detail") Detail 
                         li
                             a(href='#') Something else here
                         li.divider
