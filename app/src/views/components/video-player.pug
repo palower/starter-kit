@@ -1,0 +1,43 @@
+.video-player.component
+    figure#videoContainer(data-fullscreen="false")
+        video#video(controls preload="metadata" poster="/content/images/poster.jpg")
+            source(src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4")
+            source(src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.webm" type="video/webm")
+            source(src="http://iandevlin.github.io/mdn/video-player/video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg")
+        #videoPlayButton
+            i.fas.fa-play
+        ul#video-controls.controls
+            li
+                button#playpause(type="button") 
+                    i.fas.fa-play
+            li
+                button#stop(type="button" disabled)
+                    i.fas.fa-stop
+            li.progress
+                progress#progress(value="0" min="0")
+                    span#progress-bar
+            li
+                button#mute(type="button")
+                    i.fas.fa-volume-mute
+            //- li
+            //-     button#volinc(type="button") Vol+
+            //- li
+            //-     button#voldec(type="button") Vol-
+            li
+                button#fs(type="button")
+                    i.fas.fa-arrows-alt
+        figcaption
+            | &copy; Lorem ipsum | 
+            a(href="http://mango.blender.org" title="Copyright link") copyrightlink.com
+
+
+        .video-transcript
+            a.transcript-button(href="#transcriptCopy" data-toggle="collapse" ) Transcript  
+                    i.fas.fa-plus 
+            #transcriptCopy.collapse.accordion-content
+                p Fusce euismod mi at risus tincidunt malesuada. Donec pulvinar mauris sit amet orci tincidunt, luctus consectetur mi convallis. Integer fermentum semper rutrum. Nam placerat lacinia felis nec varius. Nunc metus nibh, malesuada posuere tortor eu, tincidunt aliquet metus. Nunc quis arcu a magna sodales malesuada sit amet non sapien. Maecenas vestibulum pretium ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet molestie ligula, nec molestie lectus.
+                p Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.
+                p Fusce euismod mi at risus tincidunt malesuada. Donec pulvinar mauris sit amet orci tincidunt, luctus consectetur mi convallis. Integer fermentum semper rutrum. Nam placerat lacinia felis nec varius. Nunc metus nibh, malesuada posuere tortor eu, tincidunt aliquet metus. Nunc quis arcu a magna sodales malesuada sit amet non sapien. Maecenas vestibulum pretium ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet molestie ligula, nec molestie lectus.
+                p Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.

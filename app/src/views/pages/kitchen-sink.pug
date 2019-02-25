@@ -172,6 +172,24 @@ block toprow
     xmp 
       include ../../../content/html/views/components/tabs-left.html 
 
+  //- component block - anchor + include + code snippet
+  a.anchor(name="video-player")   
+  include ../components/video-player.pug
+  .kitchen-btns
+    span.code-snippet-btn Code 
+      i.fas.fa-chevron-down 
+    | |
+    a.see-on-page(href="/content/html/views/pages/detail.html" target="_blank") See on page 
+      i.fas.fa-chevron-right
+    .component-dependencies 
+      span.dependency
+        | DEPENDENCIES: 
+      | CSS, JS
+  .code-snippet
+    h2 Video Player  
+    xmp 
+      include ../../../content/html/views/components/video-player.html 
+
 block rightrail
   .component-list
     h3 Components
@@ -194,6 +212,8 @@ block rightrail
         .component-anchor(data-name="promo-box") Promo Box
       li
         .component-anchor(data-name="tabs-left") Tabs (left nav)
+      li
+        .component-anchor(data-name="video-player") Video Player
 
 block page_scripts
   script(src='/content/js/kitchen-scripts.js')
