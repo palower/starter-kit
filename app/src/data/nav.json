@@ -1,0 +1,34 @@
+{
+    "items": [
+        {
+            "title":"Kitchen Sink",
+            "path":"/content/html/views/pages/kitchen-sink.html"
+        },
+        {
+            "title":"Home",
+            "path":"/content/html/views/pages/home.html"
+        },
+        {
+            "title":"Article",
+            "path":"/content/html/views/pages/article.html"
+        },
+        {
+            "title":"Landing",
+            "path":"/content/html/views/pages/landing.html"
+        },
+        {
+            "title":"Dropdown",
+            "path":"",
+            "subitems":[
+                {
+                    "title":"About",
+                    "path":"/content/html/views/pages/about.html"
+                },
+                {
+                    "title":"Detail",
+                    "path":"/content/html/views/pages/Detail.html"
+                }
+            ]
+        }
+    ]
+}

@@ -7,6 +7,29 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var clean = require('gulp-clean-css');
+var data = require('gulp-data');
+var fs = require('fs');
+var path = require('path');
+var merge = require('gulp-merge-json');
+
+gulp.task('pug:data', function() {
+    return gulp.src('app/src/data/*.json')
+        .pipe(merge({
+            fileName: 'data.json',
+            edit: (json, file) => {
+                // Extract the filename and strip the extension
+                var filename = path.basename(file.path),
+                    primaryKey = filename.replace(path.extname(filename), '');
+
+                // Set the filename as the primary key for our JSON data
+                var data = {};
+                data[primaryKey.toUpperCase()] = json;
+
+                return data;
+            }
+        }))
+        .pipe(gulp.dest('app/content/data'));
+});
 
 gulp.task('sass', function() {
     return gulp.src('app/src/scss/styles.scss')
@@ -66,8 +89,11 @@ gulp.task('vendor', function() {
 });
 
 
-gulp.task('pug', function() {
+gulp.task('pug',['pug:data'], function() {
     return gulp.src('app/src/**/*.pug')
+    .pipe(data(function(){
+        return JSON.parse(fs.readFileSync('app/content/data/data.json'))
+    }))
       .pipe(pug({          
           pretty: true
         }))
@@ -91,8 +117,9 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("app/src/views/**/*.pug", ['pug']);
     gulp.watch("app/src/js/scripts/*.js", ['scripts']);
     gulp.watch("app/src/js/kitchen-scripts.js", ['kitchen-scripts']);
+    gulp.watch("app/src/data/*.json", ['pug:data']);
 });
 
-gulp.task('default', ['serve', 'scripts', 'kitchen-scripts', 'vendor', 'pug']);
+gulp.task('default', ['serve', 'scripts', 'kitchen-scripts', 'vendor', 'pug', 'pug:data']);
 
 //gulp.task('default', ['clean', 'icons', 'serve','vendor','componentscript','kitchensink','pug']);

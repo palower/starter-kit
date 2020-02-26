@@ -1,0 +1,22 @@
+{
+    "slides" :[
+        {
+            "align": "align-left",
+            "imagePath": "/content/images/camp-nou.jpg",
+            "heading": "Porttitor gravida",
+            "content": "Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate."
+        },
+        {
+            "align": "align-right",
+            "imagePath": "/content/images/neon-shoes.jpg",
+            "heading": "Facilisis vulputate",
+            "content": "Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate."
+        },
+        {
+            "align": "align-left",
+            "imagePath": "/content/images/stadium-pitch.jpg",
+            "heading": "Consequat sem",
+            "content": "Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate."
+        }
+    ]
+}

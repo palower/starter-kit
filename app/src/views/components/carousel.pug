@@ -1,17 +1,18 @@
 .carousel.component
     .carousel-slider
-        .slide
-            img.slide-img(src="/content/images/camp-nou.jpg")
-            .slide-copy.align-left
-                h2 Porttitor gravida
-                p Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate.
-        .slide
-            img.slide-img(src="/content/images/neon-shoes.jpg")
-            .slide-copy.align-right
-                h2 Facilisis vulputate
-                p Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate.
-        .slide
-            img.slide-img(src="/content/images/stadium-pitch.jpg")
-            .slide-copy.align-right
-                h2 Consequat sem
-                p Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate.
+        each slide in CAROUSEL.slides
+            .slide
+                img.slide-img(src= slide.imagePath)
+                div(class="slide-copy" class=slide.align)
+                    h2= slide.headding
+                    p= slide.content
+        //- .slide
+        //-     img.slide-img(src="/content/images/neon-shoes.jpg")
+        //-     .slide-copy.align-right
+        //-         h2 Facilisis vulputate
+        //-         p Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate.
+        //- .slide
+        //-     img.slide-img(src="/content/images/stadium-pitch.jpg")
+        //-     .slide-copy.align-right
+        //-         h2 Consequat sem
+        //-         p Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate.

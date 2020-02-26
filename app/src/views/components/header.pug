@@ -13,31 +13,20 @@ nav.navbar.navbar-default.navbar-fixed-top
             //-         i.fas.fa-search
         #navbar.navbar-collapse.collapse
             ul.nav.navbar-nav
-                li.active
-                    a(href='/content/html/views/pages/kitchen-sink.html' title="Kitchen Sink") Kitchen Sink
-                li
-                    a(href='/content/html/views/pages/home.html' title="Home") Home
-                li
-                    a(href='/content/html/views/pages/article.html' title="Article") Article
-                li
-                    a(href='/content/html/views/pages/landing.html' title="Landing") Landing
-                li.dropdown
-                    a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false' title="Dropdown")
-                        | Dropdown 
-                        span.caret
-                    ul.dropdown-menu(role='menu')
+                each item in NAV.items
+                    if item.subitems
+                        li.dropdown
+                            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false' title= item.title)
+                                = item.title 
+                                span.caret
+                            ul.dropdown-menu(role='menu')
+                                each subitem in item.subitems
+                                    li
+                                        a(href='/content/html/views/pages/about.html' title= subitem.title)
+                                            = subitem.title 
+                    else
                         li
-                            a(href='/content/html/views/pages/about.html' title="About") About 
-                        li
-                            a(href='/content/html/views/pages/detail.html' title="Detail") Detail 
-                        li
-                            a(href='#') Something else here
-                        li.divider
-                        li.dropdown-header Nav header
-                        li
-                            a(href='#') Separated link
-                        li
-                            a(href='#') One more separated link
+                            a(href=item.path title=item.title)= item.title
         .input-group.search-bar
             input(type="text" class="form-control search-input" placeholder="Search for...")
             span.input-group-btn

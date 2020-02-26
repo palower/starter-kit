@@ -1,0 +1,90 @@
+{
+	"ACCORDION": {
+		"items": [
+			{
+				"heading": "Collapsible",
+				"content": "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p> <p> Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>"
+			},
+			{
+				"heading": "Collapsible",
+				"content": "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p> <p> Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>"
+			},
+			{
+				"heading": "Collapsible",
+				"content": "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris orci, aliquam eu arcu non, eleifend tincidunt orci. Etiam ullamcorper tristique urna, nec mollis sem commodo ut. Ut consequat urna ut urna tincidunt varius. Morbi imperdiet lacus hendrerit lorem dictum ultrices. Aenean tempus quis tellus non consequat. Pellentesque porta odio non quam pharetra, in eleifend arcu varius.</p> <p> Mauris sed mi dolor. Crast aliquam lectus id leo finibus commodo. Mauris vitae mollis lorem, eget maximus odio. Pellentesque porta, magna sed accumsan egestas, leo risus sodales sem, et porta tellus nulla sed risus.</p>"
+			}
+		]
+	},
+	"CAROUSEL": {
+		"slides": [
+			{
+				"align": "align-left",
+				"imagePath": "/content/images/camp-nou.jpg",
+				"heading": "Porttitor gravida",
+				"content": "Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate."
+			},
+			{
+				"align": "align-right",
+				"imagePath": "/content/images/neon-shoes.jpg",
+				"heading": "Facilisis vulputate",
+				"content": "Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate."
+			},
+			{
+				"align": "align-left",
+				"imagePath": "/content/images/stadium-pitch.jpg",
+				"heading": "Consequat sem",
+				"content": "Praesent et leo sed mauris porttitor gravida. Duis vel consequat sem. Donec non est ex. Cras accumsan nisl et massa facilisis vulputate."
+			}
+		]
+	},
+	"LIST": {
+		"links": [
+			{
+				"href": "/link1",
+				"displayName": "Link 1"
+			},
+			{
+				"href": "/link2",
+				"displayName": "Link 2"
+			},
+			{
+				"href": "/link3",
+				"displayName": "Link 3"
+			}
+		]
+	},
+	"NAV": {
+		"items": [
+			{
+				"title": "Kitchen Sink",
+				"path": "/content/html/views/pages/kitchen-sink.html"
+			},
+			{
+				"title": "Home",
+				"path": "/content/html/views/pages/home.html"
+			},
+			{
+				"title": "Article",
+				"path": "/content/html/views/pages/article.html"
+			},
+			{
+				"title": "Landing",
+				"path": "/content/html/views/pages/landing.html"
+			},
+			{
+				"title": "Dropdown",
+				"path": "",
+				"subitems": [
+					{
+						"title": "About",
+						"path": "/content/html/views/pages/about.html"
+					},
+					{
+						"title": "Detail",
+						"path": "/content/html/views/pages/Detail.html"
+					}
+				]
+			}
+		]
+	}
+}
