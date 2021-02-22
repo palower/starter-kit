@@ -15,8 +15,10 @@ This project is a ReactJS accelerator built based on commonly used functionality
     - Kitchen sink has viewable source code for easy transfer to back-end teams for platform integration.
 - Modular patterns for component re-use
 - Leverages PUG templating for breaking down and combinations of master page, page layouts, and components
+- Data extracted from components and pulled in from JSON files.
 - Multiple components
 - Fully Responsive
+- Semantic markup and Accessibility
 
 ## Run the project
 gulp serve
