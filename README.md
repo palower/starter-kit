@@ -1,5 +1,5 @@
-# React Starter Kit
-This project is a ReactJS accelerator built based on commonly used functionality from previous projects. The repo is meant to get a dev (and team) quickly up and running with a base level of tools.
+# FED Starter Kit
+This project is a FED accelerator built based on commonly used functionality from previous projects. The repo is meant to get a dev (and team) quickly up and running with a base level of tools.
 
 ## Tech used
 - HTML
