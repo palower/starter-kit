@@ -8,6 +8,7 @@ This project is a FED accelerator built based on commonly used functionality fro
 - Bootstrap
 - jQuery
 - JavaScript
+- Gulp
 - Node
 
 ## Prebuilt Tools
